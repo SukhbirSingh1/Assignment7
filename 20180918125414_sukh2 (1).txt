@@ -1,0 +1,30 @@
+package javaapplication5;
+
+import java.util.Scanner;
+public class JavaApplication5 {
+    //private static Object keyboard;
+
+    
+    public static void main(String[] args) {
+        
+        Scanner keyboard = new Scanner(System.in);
+        int markCount;
+        System.out.print("How many marks for this student?");
+        markCount=keyboard.nextInt();
+        int[] marks = new int[markCount];
+        int i;
+        for(i=0;i<markCount;i++){
+            System.out.print("please enter the number" + (i+1) + ":");
+            marks[i]=keyboard.nextInt();}
+        double average;
+        double sum=0;
+        System.out.print("The marks are ");
+        for(i=0; i<markCount;i++){
+            sum = sum+marks[i];
+        
+        double avg =sum/markCount;
+                System.out.println("The average marks is:" +avg);
+        }
+    }
+    
+}
